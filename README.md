@@ -12,7 +12,7 @@
 
 - `Flexible and easy to use` : With just two required props, the Vue Animated Counter is easy to integrate into your Vue projects, making it a versatile and valuable addition to your toolkit.
 
-## Usage
+## Usage with Vue 3
 
 ```bash
 npm install vue-animated-counter
@@ -44,6 +44,43 @@ and use it as follows:
 }
 </style>
 ```
+
+## Usage with Nuxt 3
+
+```bash
+npm install vue-animated-counter
+```
+
+After installation, register the component as a Nuxt plugin. You can read more about Nuxt plugins [here](https://nuxt.com/docs/guide/directory-structure/plugins). Create a plugin file `plugins/animatedCounter.client.ts`. We are using the `.client` prefix to tell Nuxt that our plugin should only be used in the client side as shown below :
+
+```ts
+// plugins/animatedCounter.client.ts
+import AnimatedCounter from 'vue-animated-counter';
+export default defineNuxtPlugin(nuxtApp => {
+    nuxtApp.vueApp.use(AnimatedCounter)
+})
+```
+
+then in your components directory create a `CounterComponent.vue` file ( You can name it whatever you want.) as shown below :
+
+```js
+//components/CounterComponent.vue
+<template>
+    <div>
+        <ClientOnly>
+            <AnimatedCounter :value="500" :duration="1000" class="counter" />
+        </ClientOnly>
+    </div>
+</template>
+<style>
+.counter {
+  font-size: 40px;
+}
+</style>
+
+```
+
+we are using the `<ClientOnly/>` component to render our `AnimatedCounter` component only in the client side. You can read more about the `ClientOnly` component [here](https://nuxt.com/docs/api/components/client-only)
 
 ## Props 
 
