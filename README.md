@@ -51,7 +51,7 @@ and use it as follows:
 npm install vue-animated-counter
 ```
 
-After installation, register the component as a Nuxt plugin. You can read more about Nuxt plugins [here](https://nuxt.com/docs/guide/directory-structure/plugins). Create a plugin file `plugins/animatedCounter.client.ts`. We are using the `.client` prefix to tell Nuxt that our plugin should only be used in the client side as shown below :
+After installation, register the component as a Nuxt plugin. You can read more about Nuxt plugins [here](https://nuxt.com/docs/guide/directory-structure/plugins). Create a plugin file `plugins/animatedCounter.client.ts`. We are using the `.client` prefix to tell Nuxt that our plugin should only be used in the client side. Register the `AnimatedCounter` component as shown below :
 
 ```ts
 // plugins/animatedCounter.client.ts
@@ -61,7 +61,7 @@ export default defineNuxtPlugin(nuxtApp => {
 })
 ```
 
-then in your components directory create a `CounterComponent.vue` file ( You can name it whatever you want.) as shown below :
+then in your components directory create a `CounterComponent.vue` file ( You can name it whatever you want ) and wrap the `AnimatedCounter` component inside the `<ClientOnly/>` component as shown below :
 
 ```js
 //components/CounterComponent.vue
