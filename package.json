@@ -1,6 +1,6 @@
 {
   "name": "vue-animated-counter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": [
     "dist"
   ],
@@ -28,9 +28,11 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
   },
-  "dependencies": {
-    "rollup-plugin-typescript2": "^0.34.1",
+  "peerDependencies": {
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "rollup-plugin-typescript2": "^0.34.1"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
