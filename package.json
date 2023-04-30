@@ -28,11 +28,9 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
   },
-  "peerDependencies": {
-    "vue": "^3.2.47"
-  },
   "dependencies": {
-    "rollup-plugin-typescript2": "^0.34.1"
+    "rollup-plugin-typescript2": "^0.34.1",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
