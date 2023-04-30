@@ -28,13 +28,17 @@ const startAnimation = () => {
   }, stepTime);
 };
 
-const onEnter = () => {
-  startAnimation()
-}
+const onEnter = (target: Element): IntersectionObserverEntry => {
+  startAnimation();
+  const boundingClientRect = target.getBoundingClientRect();
+  const intersectionRect = boundingClientRect;
+  const rootBounds = document.body.getBoundingClientRect();
+  const time = performance.now();
+  return { target, boundingClientRect, intersectionRect, rootBounds, time, isIntersecting: true, intersectionRatio: 1 };
+};
 
 onMounted(() => {
-  //@ts-ignore
-  observer.value = useIntersect(wrapper.value, onEnter, false, {
+  observer.value = useIntersect(wrapper.value, onEnter, true, {
     threshold: 0.8,
   });
 });

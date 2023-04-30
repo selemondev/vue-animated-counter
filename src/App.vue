@@ -17,6 +17,7 @@ import AnimatedCounter from './components/AnimatedCounter.vue';
 
 .counter {
   font-size: 40px;
+  font-family: sans-serif;
 }
 
 </style>

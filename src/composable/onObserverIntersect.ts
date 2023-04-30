@@ -1,7 +1,6 @@
 export const useIntersect = (
     elementToWatch: HTMLElement,
-    callback: (arg0: Element) => IntersectionObserverEntry,
-    outCallback = () => { },
+    callback: (arg: Element) => IntersectionObserverEntry,
     once: true,
     options = { threshold: 1.0 }
 ) => {
@@ -12,9 +11,6 @@ export const useIntersect = (
             if (once) {
                 observer.unobserve(entry.target)
             }
-        } else {
-            //@ts-ignore
-            outCallback(entry.target);
         }
     }, options);
 
