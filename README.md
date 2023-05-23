@@ -1,4 +1,4 @@
-# Vue Animated Counter
+# Vue Animated Counter :zap:
 
 - Vue Animated Counter is a performant and versatile Vue component that adds an animated counting feature to your Vue projects. This component is designed to provide a seamless and engaging user experience, allowing you to easily showcase important metrics or data points in an elegant and visually appealing way.
 
