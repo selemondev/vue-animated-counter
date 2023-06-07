@@ -4,7 +4,7 @@ import AnimatedCounter from './components/AnimatedCounter.vue';
 
 <template>
     <div class="wrapper">
-        <AnimatedCounter :value="500" :duration="1000" class="counter"/>
+        <AnimatedCounter :value="500" :duration="200" class="counter" />
     </div>
 </template>
 <style>
@@ -16,8 +16,7 @@ import AnimatedCounter from './components/AnimatedCounter.vue';
 }
 
 .counter {
-  font-size: 40px;
-  font-family: sans-serif;
+    font-size: 40px;
+    font-family: sans-serif;
 }
-
 </style>
