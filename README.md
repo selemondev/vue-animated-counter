@@ -26,7 +26,7 @@ import App from './App.vue'
 import './assets/main.css'
 import AnimatedCounter from "vue-animated-counter"
 const app = createApp(App)
-app.use(AnimatedCounter)
+app.component("AnimatedCounter", AnimatedCounter);
 app.mount('#app')
 ```
 
