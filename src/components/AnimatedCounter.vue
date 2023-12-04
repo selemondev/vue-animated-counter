@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { vIntersectionObserver } from "@vueuse/components";
+import { onMounted, ref, watch, withDefaults } from "vue";
+import { useIntersectionObserver } from "@/composables/intersectionObserver";
 export interface Props {
   value: number,
   duration: number
@@ -9,8 +9,8 @@ const props = withDefaults(defineProps<Props>(), {
   value: 0,
   duration: 1000
 });
+const { observedElement, observer, isIntersecting } = useIntersectionObserver();
 const displayValue = ref<number>(0);
-const root = ref();
 const startAnimation = () => {
   const startValue = 0;
   const endValue = props.value;
@@ -28,28 +28,19 @@ const startAnimation = () => {
 
   return () => clearInterval(timer);
 };
+onMounted(() => {
+  observedElement.value !== null && observer.observe(observedElement.value)
+});
 
-
-let stopAnimation: Function;
-const isVisible = ref(false)
-function onIntersectionObserver(entries: IntersectionObserverEntry[]) {
-  const [{ isIntersecting }] = entries;
-  if (isIntersecting) {
-    if (stopAnimation) {
-      stopAnimation();
-    }
-    stopAnimation = startAnimation();
-  } else {
-    if (stopAnimation) {
-      stopAnimation();
-    }
+watch(() => isIntersecting.value, (newValue) => {
+  if (newValue) {
+    startAnimation();
   }
-  isVisible.value = isIntersecting;
-}
+});
 </script>
 
 <template>
-  <div v-intersection-observer="[onIntersectionObserver, { root }]">
+  <div ref="observedElement">
     {{ displayValue }}
   </div>
 </template>

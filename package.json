@@ -35,8 +35,6 @@
     "vue": "^3.2.47"
   },
   "dependencies": {
-    "@vueuse/components": "^10.1.2",
-    "@vueuse/core": "^10.1.2",
     "rollup-plugin-typescript2": "^0.34.1"
   },
   "devDependencies": {
