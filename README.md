@@ -1,3 +1,5 @@
+<a href="https://pkg-size.dev/vue-animated-counter"><img src="https://pkg-size.dev/badge/bundle/850" title="Bundle size for vue-animated-counter"></a>
+
 # Vue Animated Counter :zap:
 
 - Vue Animated Counter is a performant, dependency free and versatile Vue component that adds an animated counting feature to your Vue projects. This component is designed to provide a seamless and engaging user experience, allowing you to easily showcase important metrics or data points in an elegant and visually appealing way.
