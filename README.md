@@ -59,7 +59,7 @@ After installation, register the component as a Nuxt plugin. You can read more a
 // plugins/animatedCounter.client.ts
 import AnimatedCounter from 'vue-animated-counter';
 export default defineNuxtPlugin(nuxtApp => {
-    nuxtApp.vueApp.use(AnimatedCounter)
+    nuxtApp.vueApp.component('AnimatedCounter', AnimatedCounter)
 })
 ```
 
