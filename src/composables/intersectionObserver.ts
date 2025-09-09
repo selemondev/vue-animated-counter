@@ -7,7 +7,7 @@ export const useIntersectionObserver = () => {
     const interCallback = (entries: IntersectionObserverEntry[]) => {
         if (entries.length > 0) {
             const [entry] = entries;
-            isIntersecting.value = entry.isIntersecting;
+            isIntersecting.value = entry!.isIntersecting;
         }
     };
 
