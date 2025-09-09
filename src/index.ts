@@ -1,2 +1,2 @@
-import { AnimatedCounter } from "./components";
+import AnimatedCounter from "./components/AnimatedCounter.vue";
 export default AnimatedCounter;

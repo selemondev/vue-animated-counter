@@ -1,23 +1,28 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "skipLibCheck": true,
-    "outDir": "dist",
-    "declaration": true
-  },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"declaration": true,
+		"composite": true,
+		"module": "preserve",
+		"emitDeclarationOnly": true,
+		"isolatedModules": true,
+		"lib": ["es2022", "dom", "dom.iterable"]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"env.d.ts"
+	],
+	"files": ["./shim-vue.d.ts"]
 }
