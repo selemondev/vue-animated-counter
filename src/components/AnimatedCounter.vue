@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch, withDefaults, onUnmounted } from "vue";
-import { useIntersectionObserver } from "@/composables/intersectionObserver";
+import { useIntersectionObserver } from "../composables/intersectionObserver";
 
 export interface Props {
     value: number;
