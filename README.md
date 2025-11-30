@@ -69,7 +69,7 @@ then in your components directory create a `CounterComponent.vue` file ( You can
 //components/CounterComponent.vue
 <template>
     <div>
-        <ClientOnly>
+        <ClientOnly fallback="500">
             <AnimatedCounter :value="500" :duration="1000" class="counter" />
         </ClientOnly>
     </div>
