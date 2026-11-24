@@ -94,3 +94,7 @@ we are using the `<ClientOnly/>` component to render our `AnimatedCounter` compo
 ## Conclusion
 
 - Vue Animated Counter is a powerful and versatile tool for Vue developers who want to add an elegant and engaging animated counting feature to their projects. With its customizable duration and viewport detection, this component provides an effective and efficient way to showcase important metrics or data points in a visually appealing and interactive way.
+
+## Author
+
+[Selemon Brahanu](https://selemon.dev)
